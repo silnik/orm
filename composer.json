@@ -9,6 +9,7 @@
             "php": "8.1"
         }
     },
+    "minimum-stability": "dev",
     "require": {
         "ext-pdo": "*",
         "doctrine/orm": "3.0.x-dev",
