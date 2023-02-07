@@ -1,0 +1,25 @@
+{
+    "name": "silnik/orm",
+    "description": "Silnik orm doctrine implementation",
+    "author": "bieleski",
+    "type": "project",
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "require": {
+        "ext-pdo": "*",
+        "doctrine/orm": "3.0.x-dev",
+        "doctrine/dbal": "3.6.x-dev",
+        "symfony/cache": "^6.2",
+        "doctrine/migrations": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Silnik\\ORM\\": "src/"
+        }
+    },
+    "scripts": {}
+}
