@@ -13,7 +13,9 @@
         "ext-pdo": "*",
         "doctrine/orm": "3.0.x-dev",
         "doctrine/dbal": "3.6.x-dev",
-        "symfony/cache": "^6.2",
+        "symfony/cache": "^6.2"
+    },
+    "require-dev": {
         "doctrine/migrations": "^3.5"
     },
     "autoload": {
