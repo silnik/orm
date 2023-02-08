@@ -3,6 +3,7 @@
     "description": "Silnik orm doctrine implementation",
     "author": "bieleski",
     "type": "project",
+    "license": "MIT",
     "config": {
         "platform": {
             "php": "8.1"
