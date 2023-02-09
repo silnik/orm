@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Silnik\ORM;
 
 use Doctrine\ORM\EntityRepository;
@@ -36,10 +34,10 @@ class ORM
      * Get SQL from query
      *
      * @author Yosef Kaminskyi
-     * @param QueryBilderDql $query
-     * @return int
+     * @param $query
+     * @return string
      */
-    public static function printSQL($query)
+    public static function printSQL($query): string
     {
         $sql = $query->getSql();
         $paramsList = self::getListParamsByDql($query->getDql());
@@ -89,8 +87,8 @@ class ORM
      * Get query params list
      *
      * @author Yosef Kaminskyi <yosefk@spotoption.com>
-     * @param  Doctrine\ORM\Query\Parameter $paramObj
-     * @return int
+     * @param  \Doctrine\ORM\Query\Parameter $paramObj
+     * @return array
      */
     protected static function getParamsArray($paramObj)
     {

@@ -27,24 +27,6 @@ abstract class AbstractEntity
     protected $updatedat;
 
     /**
-     * Get the value of updatedat
-     */
-    public function getUpdatedat()
-    {
-        return $this->updatedat;
-    }
-
-    /**
-     * Set the value of updatedat
-     */
-    public function setUpdatedat($updatedat): self
-    {
-        $this->updatedat = $updatedat;
-
-        return $this;
-    }
-
-    /**
      * Get the value of createdat
      */
     public function getCreatedat()
@@ -68,5 +50,23 @@ abstract class AbstractEntity
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Get the value of updatedat
+     */
+    public function getUpdatedat()
+    {
+        return $this->updatedat;
+    }
+
+    /**
+     * Set the value of updatedat
+     */
+    public function setUpdatedat($updatedat): self
+    {
+        $this->updatedat = $updatedat;
+
+        return $this;
     }
 }
