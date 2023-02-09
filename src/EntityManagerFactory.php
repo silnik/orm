@@ -30,12 +30,15 @@ class EntityManagerFactory
                 'path' => $_ENV['PATH_DATABASE'] . 'db.sqlite',
             ];
         }
-
         $isDevMode = true;
-        $pathEntity = [dirname(__DIR__, 3) . DIRECTORY_SEPARATOR . 'library' . DIRECTORY_SEPARATOR . 'entity'];
 
-        $config = ORMSetup::createAttributeMetadataConfiguration($pathEntity, $isDevMode, null, null);
-        //$config->setProxyDir(dirname(__DIR__,2).'/storage/proxyTemp');
+        $config = ORMSetup::createAttributeMetadataConfiguration(
+            [dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Entity'],
+            $isDevMode,
+            null,
+            null
+        );
+        $config->setProxyDir(dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'DoctrineProxies');
 
         return new EntityManager(
             DriverManager::getConnection($this->connection, $config),

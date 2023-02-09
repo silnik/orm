@@ -20,6 +20,5 @@
         "psr-4": {
             "Silnik\\ORM\\": "src/"
         }
-    },
-    "scripts": {}
+    }
 }
