@@ -30,6 +30,11 @@ class ORM
         return self::$em;
     }
 
+    public static function dumpQql($query): void
+    {
+        echo self::printSQL($query);
+        exit;
+    }
      /**
      * Get SQL from query
      *
