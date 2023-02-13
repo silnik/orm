@@ -30,6 +30,10 @@ class ORM
         return self::$em;
     }
 
+    public static function dumpQqlToLog($query): void
+    {
+        error_log(self::printSQL($query));
+    }
     public static function dumpQql($query): void
     {
         echo self::printSQL($query);

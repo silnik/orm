@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c7bd33d1f48d74a1c8a080942e3edd0",
+    "content-hash": "e7ffb6e22cb0318dca123b30a12c5fe2",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -282,12 +282,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "85b98cb23c8af471a67abfe14485da696bcabc2e"
+                "reference": "280ffba34df9c8080a3269126e8e0320190ce364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/85b98cb23c8af471a67abfe14485da696bcabc2e",
-                "reference": "85b98cb23c8af471a67abfe14485da696bcabc2e",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/280ffba34df9c8080a3269126e8e0320190ce364",
+                "reference": "280ffba34df9c8080a3269126e8e0320190ce364",
                 "shasum": ""
             },
             "require": {
@@ -371,7 +371,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/3.6.0"
+                "source": "https://github.com/doctrine/dbal/tree/3.6.x"
             },
             "funding": [
                 {
@@ -387,7 +387,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-07T22:52:03+00:00"
+            "time": "2023-02-13T11:17:16+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -935,12 +935,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "0f77181a2cd09eb124c8eedcf5a6d9f48ad21f28"
+                "reference": "759ae5678f451ab3a3459d537d31d8f1b3c09d40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/0f77181a2cd09eb124c8eedcf5a6d9f48ad21f28",
-                "reference": "0f77181a2cd09eb124c8eedcf5a6d9f48ad21f28",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/759ae5678f451ab3a3459d537d31d8f1b3c09d40",
+                "reference": "759ae5678f451ab3a3459d537d31d8f1b3c09d40",
                 "shasum": ""
             },
             "require": {
@@ -1016,7 +1016,7 @@
                 "issues": "https://github.com/doctrine/orm/issues",
                 "source": "https://github.com/doctrine/orm/tree/3.0.x"
             },
-            "time": "2023-02-08T23:07:14+00:00"
+            "time": "2023-02-13T22:08:48+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -2660,7 +2660,7 @@
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "8.1"
+        "php": "8.2"
     },
     "plugin-api-version": "2.3.0"
 }
