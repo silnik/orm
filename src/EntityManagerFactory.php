@@ -38,7 +38,7 @@ class EntityManagerFactory
             null,
             null
         );
-        $config->setProxyDir(dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'DoctrineProxies');
+        $config->setProxyDir(dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'DoctrineProxies');
 
         return new EntityManager(
             DriverManager::getConnection($this->connection, $config),
