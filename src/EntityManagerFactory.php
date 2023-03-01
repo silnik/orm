@@ -28,8 +28,12 @@ class EntityManagerFactory
                 'charset' => getenv('DB_CHARSET'),
             ];
         } else {
+            if (!file_exists(PATH_ROOT . getenv('PATH_DATABASE'))) {
+                mkdir(PATH_ROOT . getenv('PATH_DATABASE'), 0777, true);
+            }
             $this->connection = [
-                'path' => getenv('PATH_DATABASE') . '/db.sqlite',
+                'driver' => getenv('DB_DRIVER'),
+                'path' => PATH_ROOT . getenv('PATH_DATABASE') . '/db.sqlite',
             ];
             if (!file_exists($this->connection['path'])) {
                 file_put_contents($this->connection['path'], '');
