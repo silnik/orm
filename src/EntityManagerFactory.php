@@ -29,7 +29,7 @@ class EntityManagerFactory
             ];
         } else {
             $this->connection = [
-                'path' => getenv('PATH_DATABASE') . 'db.sqlite',
+                'path' => getenv('PATH_DATABASE') . '/db.sqlite',
             ];
             if (!file_exists($this->connection['path'])) {
                 file_put_contents($this->connection['path'], '');
