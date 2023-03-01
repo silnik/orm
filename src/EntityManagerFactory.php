@@ -13,24 +13,26 @@ class EntityManagerFactory
 
     public function getEntityManager(): EntityManagerInterface
     {
-        if (isset($_ENV['DB_USERNAME']) && isset($_ENV['DB_PASSWORD']) && isset($_ENV['DB_DATABASE']) &&
-            !empty($_ENV['DB_USERNAME']) && !empty($_ENV['DB_PASSWORD']) && !empty($_ENV['DB_DATABASE'])
+        if (
+            !empty(getenv('DB_USERNAME')) &&
+            !empty(getenv('DB_USERNAME')) &&
+            !empty(getenv('DB_USERNAME'))
         ) {
             $this->connection = [
-                'driver' => $_ENV['DB_DRIVER'] ?? 'pdo_mysql',
-                'host' => $_ENV['DB_HOST'] ?? 'localhost',
-                'port' => $_ENV['DB_PORT'] ?? 3306,
-                'user' => $_ENV['DB_USERNAME'],
-                'password' => $_ENV['DB_PASSWORD'],
-                'dbname' => $_ENV['DB_DATABASE'],
-                'charset' => $_ENV['DB_CHARSET'] ?? 'utf8',
+                'driver' => getenv('DB_DRIVER') ?? 'pdo_mysql',
+                'host' => getenv('DB_HOST') ?? 'localhost',
+                'port' => getenv('DB_PORT') ?? 3306,
+                'user' => getenv('DB_USERNAME'),
+                'password' => getenv('DB_PASSWORD'),
+                'dbname' => getenv('DB_DATABASE'),
+                'charset' => getenv('DB_CHARSET'),
             ];
         } else {
             $this->connection = [
                 'path' => $_ENV['PATH_DATABASE'] . 'db.sqlite',
             ];
         }
-        $isDevMode = true;
+        $isDevMode = (getenv('APP_ENV') != 'production');
 
         $config = ORMSetup::createAttributeMetadataConfiguration(
             [dirname(__DIR__, 4) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'Entity'],
