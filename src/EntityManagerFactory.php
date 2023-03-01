@@ -19,9 +19,9 @@ class EntityManagerFactory
             !empty(getenv('DB_USERNAME'))
         ) {
             $this->connection = [
-                'driver' => getenv('DB_DRIVER') ?? 'pdo_mysql',
-                'host' => getenv('DB_HOST') ?? 'localhost',
-                'port' => getenv('DB_PORT') ?? 3306,
+                'driver' => getenv('DB_DRIVER'),
+                'host' => getenv('DB_HOST'),
+                'port' => getenv('DB_PORT'),
                 'user' => getenv('DB_USERNAME'),
                 'password' => getenv('DB_PASSWORD'),
                 'dbname' => getenv('DB_DATABASE'),
@@ -29,8 +29,11 @@ class EntityManagerFactory
             ];
         } else {
             $this->connection = [
-                'path' => $_ENV['PATH_DATABASE'] . 'db.sqlite',
+                'path' => getenv('PATH_DATABASE') . 'db.sqlite',
             ];
+            if (!file_exists($this->connection['path'])) {
+                file_put_contents($this->connection['path'], '');
+            }
         }
         $isDevMode = (getenv('APP_ENV') != 'production');
 
